@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Fupo - La squadra che non era una squadra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 4px solid #ffd700;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffd700;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 0.5rem;
+        }
+
+        .storia {
+            background: linear-gradient(to right, #f8f9fa, white);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .giocatori {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .giocatore {
+            background: linear-gradient(to bottom, #f8f9fa, white);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .giocatore:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .giocatore h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .numero {
+            display: inline-block;
+            background: #ffd700;
+            color: black;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .ruolo {
+            color: #764ba2;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .caratteristiche {
+            list-style: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .caratteristiche li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+
+        .caratteristiche li:before {
+            content: "⚽ ";
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 4px solid #ffd700;
+        }
+
+        .trofei {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trofeo {
+            text-align: center;
+        }
+
+        .trofeo-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ FC FUPO ⚽</h1>
+        <p>"Nati per gioco, uniti per passione"</p>
+    </header>
+
+    <div class="container">
+        <section class="storia">
+            <h2>La nostra storia</h2>
+            <p>
+                Tutto è nato da una semplice idea tra amici al bar: perché non formare una vera squadra di calcetto?
+                Era il 2019 quando Marco, Alessio, Andrea e gli altri hanno deciso di riunirsi ogni mercoledì sera 
+                per giocare a pallone. Quella che doveva essere una partita occasionale è diventata una tradizione, 
+                una passione, una <strong>famiglia</strong>.
+            </p>
+            <p style="margin-top: 1rem;">
+                Da 5 amici scalcinati siamo diventati una vera squadra competitiva. Certo, non abbiamo vinto coppe 
+                europee, ma abbiamo vinto qualcosa di più importante: amicizie indelebili, ricordi incredibili e il 
+                diritto di vantarci al bar di essere una squadra seria!
+            </p>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>12</h3>
+                    <p>Stagioni</p>
+                </div>
+                <div class="stat-box">
+                    <h3>87</h3>
+                    <p>Vittorie</p>
+                </div>
+                <div class="stat-box">
+                    <h3>124</h3>
+                    <p>Gol segnati</p>
+                </div>
+                <div class="stat-box">
+                    <h3>∞</h3>
+                    <p>Amicizie</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La rosa della stagione</h2>
+            <div class="giocatori">
+                <div class="giocatore">
+                    <h3>Marco Rossi <span class="numero">1</span></h3>
+                    <p class="ruolo">Portiere</p>
+                    <ul class="caratteristiche">
+                        <li>Riflessi felini</li>
+                        <li>Imbucate improbabili</li>
+                        <li>Specialista in tuffi drammatici</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Alessio Bianchi <span class="numero">3</span></h3>
+                    <p class="ruolo">Difensore</p>
+                    <ul class="caratteristiche">
+                        <li>Muro invalicabile</li>
+                        <li>Letale negli anticipi</li>
+                        <li>Conosce ogni magagna della difesa</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Andrea De Luca <span class="numero">4</span></h3>
+                    <p class="ruolo">Difensore</p>
+                    <ul class="caratteristiche">
+                        <li>Captain America della difesa</li>
+                        <li>Interventi puliti e precisi</li>
+                        <li>Leader naturale</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Davide Ferrari <span class="numero">5</span></h3>
+                    <p class="ruolo">Centrocampista</p>
+                    <ul class="caratteristiche">
+                        <li>Polmone della squadra</li>
+                        <li>Passa sempre nel modo più difficile</li>
+                        <li>Inesauribile energia</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Matteo Graziani <span class="numero">7</span></h3>
+                    <p class="ruolo">Centrocampista/Ala</p>
+                    <ul class="caratteristiche">
+                        <li>Dribbling irresistibile</li>
+                        <li>Cross millimetrici</li>
+                        <li>Imprevedibilità assoluta</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Lorenzo Neri <span class="numero">9</span></h3>
+                    <p class="ruolo">Attaccante</p>
+                    <ul class="caratteristiche">
+                        <li>Fiuto del gol infallibile</li>
+                        <li>Scatti fulminei</li>
+                        <li>Colpisce quando meno te lo aspetti</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Riccardo Colombo <span class="numero">10</span></h3>
+                    <p class="ruolo">Trequartista</p>
+                    <ul class="caratteristiche">
+                        <li>Maestro della giocata</li>
+                        <li>Visione di gioco rara</li>
+                        <li>Anima della squadra</li>
+                    </ul>
+                </div>
+
+                <div class="giocatore">
+                    <h3>Filippo Rossi <span class="numero">11</span></h3>
+                    <p class="ruolo">Attaccante</p>
+                    <ul class="caratteristiche">
+                        <li>Velocista puro</li>
+                        <li>Gol da punta finissima</li>
+                        <li>Accelerate deconcertanti</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>I nostri trofei</h2>
+            <p>
+                Nel corso degli anni abbiamo collezionato una serie di trofei e riconoscimenti che ci rendono 
+                orgogliosi. Non tutti competitivi, ma tutti significativi!
+            </p>
+            <div class="trofei">
+                <div class="trofeo">
+                    <div class="trofeo-icon">🏆</div>
+                    <h3>Campione città</h3>
+                    <p>2023</p>
+                </div>
+                <div class="trofeo">
+                    <div class="trofeo-icon">🥈</div>
+                    <h3>Coppa Amicizia</h3>
+                    <p>2022</p>
+                </div>
+                <div class="trofeo">
+                    <div class="trofeo-icon">⭐</div>
+                    <h3>Miglior difesa</h3>
+                    <p>Stagione 2021</p>
+                </div>
+                <div class="trofeo">
+                    <div class="trofeo-icon">🎉</div>
+                    <h3>Squadra più divertente</h3>
+                    <p>Sempre!</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Curiosità e aneddoti</h2>
+            <ul class="caratteristiche">
+                <li><strong>La partita leggendaria:</strong> Quella volta che abbiamo vinto 15-14 dopo 5 tempi supplementari</li>
+                <li><strong>Marco il portiere:</strong> Parò un rigore durante una partita fondamentale e poi diede palla a Riccardo che segnò il gol decisivo</li>
+                <li><strong>Il gol di Davide:</strong> Da centrocampista ha segnato di testa il gol più importante della storia della squadra a 3 secondi dalla fine</li>
+                <li><strong>La tradizione:</strong> Ogni mercoledì sera, pioggia, neve o sole, siamo sempre lì. Non ci siamo fermati neanche durante il lockdown (all'aperto, ovviamente!)</li>
+                <li><strong>Lo staff:</strong> Pizza post-partita è obbligatoria. È il nostro vero trofeo</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <h2>FC FUPO</h2>
+        <p><strong>Motto:</strong> "Nati per gioco, uniti per passione"</p>
+        <p style="margin-top: 1rem; color: #ffd700;">
+            © 2026 FC FUPO - Quando un gruppo di amici decide di fare sul serio (ma non troppo)
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Mercoledì 20:00 - Campo Sportivo "La Corsa del Fupo"
+        </p>
+    </footer>
+</body>
+</html>
